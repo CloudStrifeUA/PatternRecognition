@@ -315,10 +315,8 @@ double GetMaxDistanceBrute(Line& max, const sf::VertexArray& points)
 {
     size_t size = points.getVertexCount();
     double dist = 0.;
-    size_t iters = 0;
     for(size_t i = 0; i < size; i++)
     {
-        ++iters;
         Line cur_max;
         double cur_dist = GetMaxDistanceFromPoint(cur_max, points, points[i].position);
         if(dist < cur_dist)
